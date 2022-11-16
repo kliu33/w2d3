@@ -41,5 +41,18 @@ class Board
     end
   end
 
-  
+  def hidden_ships_grid
+    out = Array.new(@grid.length) {Array.new(@grid.length)}
+    @grid.each_with_index do |subarr, idx|
+        subarr.each_with_index do |ele, idx2|
+            if ele == :S 
+                out[idx][idx2] = :N 
+            else
+                out[idx][idx2] = ele
+            end
+        end
+    end
+    out
+  end   
+
 end
