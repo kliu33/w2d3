@@ -44,6 +44,6 @@ class Battleship
         @remaining_misses -= 1 if @board[move] == :N
         @board.attack(move)
         @board.print
-        print @remaining_misses
+        print "Remaining guesses: #{@remaining_misses}"
     end 
 end

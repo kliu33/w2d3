@@ -3,7 +3,7 @@ class Board
     attr_reader :grid
 
     def initialize(n)
-        @grid = Array.new(n) {Array.new(n, "_")}
+        @grid = Array.new(n) {Array.new(n, :_)}
     end
 
     def [](pos)
@@ -23,7 +23,7 @@ class Board
     end
 
     def empty?(pos)
-        if self[pos] == "_"
+        if self[pos] == :_
             return true
         else
             return false
@@ -32,7 +32,7 @@ class Board
 
     def place_mark(pos, val)
         if valid?(pos) && empty?(pos)
-            self[pos] = val.to_s
+            self[pos] = val
         else
             raise RuntimeError
         end
