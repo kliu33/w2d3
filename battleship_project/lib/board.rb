@@ -72,4 +72,6 @@ class Board
     Board.print_grid(hidden_ships_grid)
   end
 
+  
+
 end
