@@ -55,4 +55,21 @@ class Board
     out
   end   
 
+  def self.print_grid(matrix)
+    matrix.each do |sub_arr|
+        sub_arr.each do |ele|
+            print "#{ele} "
+        end
+        print "\n"
+    end
+  end
+
+  def cheat
+    Board.print_grid(@grid)
+  end
+
+  def print
+    Board.print_grid(hidden_ships_grid)
+  end
+
 end

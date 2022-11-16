@@ -193,7 +193,7 @@ describe "Board" do
       end
 
       it "should print each row of @grid so every element in a row is separated with a space" do
-        expect { Board.print_grid([[:S, :N],[:X, :S]]) }.to output(/S N\nX S\n/).to_stdout
+        expect { Board.print_grid([[:S, :N],[:X, :S]]) }.to output("S N \nX S \n").to_stdout
       end
     end
 
